@@ -1,0 +1,32 @@
+`timescale 1 ps/ 1 ps
+module learn2_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg CLK_50M;
+reg RST_N;
+// wires                                               
+wire LED1;
+
+// assign statements (if any)                          
+learn2 i1 (
+// port map - connection between master ports and signals/registers   
+	.CLK_50M(CLK_50M),
+	.LED1(LED1),
+	.RST_N(RST_N)
+);
+initial                                                
+begin                                                  
+    #0 CLK_50M = 1'b0;
+    #10000 RST_N = 1'b0;
+    #10000 RST_N = 1'b1;
+    #10000000 $stop;                                                         
+end
+
+
+always #10000                                                               
+begin                                                  
+    CLK_50M = ~CLK_50M;                                            
+end                                                    
+endmodule
