@@ -1,0 +1,21 @@
+Fitter Status : Successful - Tue May 09 11:36:49 2023
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : Sdram_Control
+Top-level Entity Name : sdram_control_top
+Family : Cyclone V
+Device : 5CEBA4F23C7
+Timing Models : Preliminary
+Logic utilization (in ALMs) : 438 / 18,480 ( 2 % )
+Total registers : 485
+Total pins : 193 / 224 ( 86 % )
+Total virtual pins : 0
+Total block memory bits : 8,192 / 3,153,920 ( < 1 % )
+Total DSP Blocks : 0 / 66 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI PMA RX ATT Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total HSSI PMA TX ATT Serializers : 0
+Total PLLs : 0 / 4 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

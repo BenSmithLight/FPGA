@@ -1,0 +1,19 @@
+Analysis & Synthesis Status : Successful - Wed May 10 20:10:04 2023
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : Sdram_Control
+Top-level Entity Name : SDRAM
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 1848
+Total pins : 85
+Total virtual pins : 0
+Total block memory bits : 872,448
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI PMA RX ATT Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total HSSI PMA TX ATT Serializers : 0
+Total PLLs : 1
+Total DLLs : 0

@@ -1,0 +1,19 @@
+Partition Merge Status : Successful - Thu Apr 27 16:34:12 2023
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : uart_sdram
+Top-level Entity Name : uart_sdram
+Family : Cyclone V
+Logic utilization (in ALMs) : 1,107 / 18,480 ( 6 % )
+Total registers : 1617
+Total pins : 84 / 224 ( 38 % )
+Total virtual pins : 0
+Total block memory bits : 1,736,704 / 3,153,920 ( 55 % )
+Total DSP Blocks : 0 / 66 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI PMA RX ATT Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total HSSI PMA TX ATT Serializers : 0
+Total PLLs : 1 / 4 ( 25 % )
+Total DLLs : 0 / 4 ( 0 % )

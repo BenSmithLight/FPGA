@@ -1,0 +1,396 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/simulation/modelsim
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1682338505
+V3k@knOi=Lbk[_KiD_jAmc1
+04 12 4 work tb_sdram_top fast 0
+=1-5405db59ef00-644672c9-f6-5610
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2c;57
+vclk_gen
+Z1 !s110 1682338502
+IoSm]bEeT@9CLRlM1o`P^o1
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/simulation/modelsim
+Z4 w1640252100
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/clk_gen/clk_gen.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/clk_gen/clk_gen.v
+L0 39
+Z5 OL;L;10.2c;57
+r1
+31
+Z6 o-vlog01compat -work work
+!s100 GZZ]z40^dboSTBkeVjKI[0
+!s108 1682338502.359000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/clk_gen/clk_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/clk_gen|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/clk_gen/clk_gen.v|
+!s92 -vlog01compat -work work +incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/clk_gen
+!i10b 1
+!s85 0
+!i111 0
+vclk_gen_altpll
+Z7 !s110 1682338503
+I@7^8WPAhNi?0fzWcoM9oV2
+R2
+R3
+w1682337461
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/db/clk_gen_altpll.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/db/clk_gen_altpll.v
+L0 29
+R5
+r1
+31
+R6
+!s100 7a[X]1dJB[UVa^j2ZHzF32
+!s108 1682338503.807000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/db/clk_gen_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/db|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/db/clk_gen_altpll.v|
+!s92 -vlog01compat -work work +incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/db
+!i10b 1
+!s85 0
+!i111 0
+vfifo_ctrl
+Z8 !s110 1682338501
+I?nKc2c9MjR[0Qb2XWW;kg3
+R2
+R3
+R4
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/fifo_ctrl.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/fifo_ctrl.v
+L0 20
+R5
+r1
+31
+R6
+Z9 !s92 -vlog01compat -work work +incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram
+!s100 z=;VcVeV[Y9bz2>H3M1TF2
+!s108 1682338501.709000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/fifo_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/fifo_ctrl.v|
+!i10b 1
+!s85 0
+!i111 0
+vfifo_data
+IZXZzaSkYKRFc[ZD6NCUSg3
+R2
+R3
+R4
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/fifo_data/fifo_data.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/fifo_data/fifo_data.v
+L0 39
+R5
+r1
+31
+R6
+R1
+!s100 X1f?YMz@PEkQfI4[4URP`0
+!s108 1682338502.172000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/fifo_data/fifo_data.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/fifo_data|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/fifo_data/fifo_data.v|
+!s92 -vlog01compat -work work +incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/fifo_data
+!i10b 1
+!s85 0
+!i111 0
+vfifo_read
+IF9I?IUd72ghkgK^Zo:cCC0
+R2
+R3
+R4
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/fifo_read.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/fifo_read.v
+L0 20
+R5
+r1
+31
+R6
+Z10 !s110 1682338499
+!s100 H]8cDL2c1od:@SRiGFR1A1
+!s108 1682338499.369000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/fifo_read.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/fifo_read.v|
+Z11 !s92 -vlog01compat -work work +incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl
+!i10b 1
+!s85 0
+!i111 0
+vread_fifo
+R7
+I7JAOSYeZ=LQjYbcgaS4kc3
+R2
+R3
+R4
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/read_fifo/read_fifo.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/read_fifo/read_fifo.v
+L0 39
+R5
+r1
+31
+R6
+!s100 AJGj9_7YaQnFmT<R@>m8c3
+!s108 1682338503.559000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/read_fifo/read_fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/read_fifo|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/read_fifo/read_fifo.v|
+!s92 -vlog01compat -work work +incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/ip_core/read_fifo
+!i10b 1
+!s85 0
+!i111 0
+vsdram_a_ref
+R8
+IoP`MDBAkQ;FkdDn2z1W?40
+R2
+R3
+R4
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_a_ref.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_a_ref.v
+L0 20
+R5
+r1
+31
+R6
+R9
+!s100 d^BZe>C;X[bzLeDNjQ_::2
+!s108 1682338501.528000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_a_ref.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_a_ref.v|
+!i10b 1
+!s85 0
+!i111 0
+vsdram_arbit
+R8
+I_19Ea@ZoML<F]U0no4a4L1
+R2
+R3
+R4
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_arbit.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_arbit.v
+L0 20
+R5
+r1
+31
+R6
+R9
+!s100 ]3k?A_jo<AU=6j1A=W=Kz1
+!s108 1682338501.277000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_arbit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_arbit.v|
+!i10b 1
+!s85 0
+!i111 0
+vsdram_ctrl
+IVX:Wz^]4AlB8G^12]j>E=1
+R2
+R3
+R4
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_ctrl.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_ctrl.v
+L0 20
+R5
+r1
+31
+R6
+R9
+R8
+!s100 zDJ:ASb06FM9>4E6ZA7BS3
+!s108 1682338501.017000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_ctrl.v|
+!i10b 1
+!s85 0
+!i111 0
+vsdram_init
+Z12 !s110 1682338500
+Ije:e:KZ90h6BXA8hC?kA^0
+R2
+R3
+R4
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_init.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_init.v
+L0 20
+R5
+r1
+31
+R6
+R9
+!s100 b2O31^NL2<L:]YA^;f?223
+!s108 1682338500.712000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_init.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_init.v|
+!i10b 1
+!s85 0
+!i111 0
+vsdram_model_plus
+IenF6]ZIm:lWY2;CaFbccH0
+R2
+R3
+R4
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/../sim/tb_sdram_top/sdram_model_plus.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/../sim/tb_sdram_top/sdram_model_plus.v
+L0 56
+R5
+r1
+31
+R6
+Z13 !s110 1682338504
+!s100 MEdd;;dR72AR=j]H=fm_D1
+!s108 1682338503.973000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/../sim/tb_sdram_top/sdram_model_plus.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/../sim/tb_sdram_top|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/../sim/tb_sdram_top/sdram_model_plus.v|
+Z14 !s92 -vlog01compat -work work +incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/../sim/tb_sdram_top
+!i10b 1
+!s85 0
+!i111 0
+vsdram_read
+R12
+IgUB>]30UZRQa?diOL`C<I0
+R2
+R3
+R4
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_read.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_read.v
+L0 20
+R5
+r1
+31
+R6
+R9
+!s100 hA:`6d]aIlA2QnaJ<UJAO0
+!s108 1682338500.353000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_read.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_read.v|
+!i10b 1
+!s85 0
+!i111 0
+vsdram_top
+IhC0o?hi1YVR7MdNZ5X6HD3
+R2
+R3
+R4
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_top.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_top.v
+L0 20
+R5
+r1
+31
+R6
+R9
+R12
+!s100 VSkc=Bmo]IDh>8ie`9NR<2
+!s108 1682338500.035000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_top.v|
+!i10b 1
+!s85 0
+!i111 0
+vsdram_write
+R10
+I``e@5b;icdi]dVaEWQHOi2
+R2
+R3
+R4
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_write.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_write.v
+L0 20
+R5
+r1
+31
+R6
+!s100 ZhaL5z[lBC4_CEiG5hE4U3
+!s108 1682338499.617000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_write.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/sdram/sdram_write.v|
+R9
+!i10b 1
+!s85 0
+!i111 0
+vtb_sdram_top
+R13
+IKTUA:0Zk@FzWb:TImb6VB0
+R2
+R3
+R4
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/../sim/tb_sdram_top/tb_sdram_top.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/../sim/tb_sdram_top/tb_sdram_top.v
+L0 20
+R5
+r1
+31
+R6
+R14
+!i10b 1
+!s100 ic80aOHT70Dd>i8K7bi362
+!s85 0
+!s108 1682338504.366000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/../sim/tb_sdram_top/tb_sdram_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/../sim/tb_sdram_top|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/project/../sim/tb_sdram_top/tb_sdram_top.v|
+!i111 0
+vuart_rx
+R7
+I^f8gF=Zl7>E^gFSI^6kXo0
+R2
+R3
+R4
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/uart_rx.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/uart_rx.v
+L0 20
+R5
+r1
+31
+R6
+R11
+!s100 >0lnjeK9G9CBc39H`Q=361
+!s108 1682338503.126000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/uart_rx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/uart_rx.v|
+!i10b 1
+!s85 0
+!i111 0
+vuart_sdram
+I_>Rz]`:b^BSUYPn8f^:^02
+R2
+R3
+R4
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/uart_sdram.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/uart_sdram.v
+L0 20
+R5
+r1
+31
+R6
+R11
+R7
+!s100 bOg7LAhLdjo;6J?4hi=L80
+!s108 1682338502.945000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/uart_sdram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/uart_sdram.v|
+!i10b 1
+!s85 0
+!i111 0
+vuart_tx
+R1
+IdWJMS;zYB>MRi`SVLUP8=1
+R2
+R3
+R4
+8E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/uart_tx.v
+FE:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/uart_tx.v
+L0 20
+R5
+r1
+31
+R6
+R11
+!s100 T8jbCeVNEK56G?XbMCEWA2
+!s108 1682338502.774000
+!s107 E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/uart_tx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl|E:/work_2/licheng/ebf_ep4ce10_pro_tutorial_code-master/ebf_ep4ce10_pro_tutorial_code-master/44_uart_sdram/rtl/uart_tx.v|
+!i10b 1
+!s85 0
+!i111 0
