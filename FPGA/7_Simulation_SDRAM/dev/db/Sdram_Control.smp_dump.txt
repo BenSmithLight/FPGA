@@ -1,0 +1,7 @@
+
+State Machine - |sdram_control_top|sdram_control:sdram_control|main_state
+Name main_state.READ main_state.WRITE main_state.AREF main_state.IDLE 
+main_state.IDLE 0 0 0 0 
+main_state.AREF 0 0 1 1 
+main_state.WRITE 0 1 0 1 
+main_state.READ 1 0 0 1 

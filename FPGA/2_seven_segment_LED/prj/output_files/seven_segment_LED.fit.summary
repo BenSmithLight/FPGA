@@ -1,0 +1,21 @@
+Fitter Status : Successful - Tue Apr 25 00:35:46 2023
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : seven_segment_LED
+Top-level Entity Name : seven_segment_LED
+Family : Cyclone V
+Device : 5CEBA4F23C7
+Timing Models : Preliminary
+Logic utilization (in ALMs) : 5 / 18,480 ( < 1 % )
+Total registers : 15
+Total pins : 44 / 224 ( 20 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 3,153,920 ( 0 % )
+Total DSP Blocks : 0 / 66 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI PMA RX ATT Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total HSSI PMA TX ATT Serializers : 0
+Total PLLs : 0 / 4 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

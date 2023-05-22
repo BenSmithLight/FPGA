@@ -1,0 +1,1236 @@
+Analysis & Synthesis report for Sdram_Control
+Tue May 09 11:36:04 2023
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |sdram_control_top|sdram_control:sdram_control|main_state
+ 11. User-Specified and Inferred Latches
+ 12. Registers Removed During Synthesis
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component
+ 18. Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated
+ 19. Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_fu6:rdptr_g1p
+ 20. Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_bcc:wrptr_g1p
+ 21. Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|altsyncram_3j71:fifo_ram
+ 22. Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_3dc:rdaclr
+ 23. Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_brp
+ 24. Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_bwp
+ 25. Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_nc8:rs_dgwp
+ 26. Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_nc8:rs_dgwp|dffpipe_jd9:dffpipe12
+ 27. Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_3dc:wraclr
+ 28. Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:ws_brp
+ 29. Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:ws_bwp
+ 30. Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_oc8:ws_dgrp
+ 31. Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_oc8:ws_dgrp|dffpipe_kd9:dffpipe15
+ 32. Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component
+ 33. Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated
+ 34. Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_fu6:rdptr_g1p
+ 35. Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_bcc:wrptr_g1p
+ 36. Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|altsyncram_3j71:fifo_ram
+ 37. Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_3dc:rdaclr
+ 38. Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_brp
+ 39. Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_bwp
+ 40. Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_nc8:rs_dgwp
+ 41. Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_nc8:rs_dgwp|dffpipe_jd9:dffpipe12
+ 42. Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_3dc:wraclr
+ 43. Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:ws_brp
+ 44. Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:ws_bwp
+ 45. Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_oc8:ws_dgrp
+ 46. Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_oc8:ws_dgrp|dffpipe_kd9:dffpipe15
+ 47. Parameter Settings for User Entity Instance: Top-level Entity: |sdram_control_top
+ 48. Parameter Settings for User Entity Instance: sdram_control:sdram_control
+ 49. Parameter Settings for User Entity Instance: sdram_control:sdram_control|sdram_init:sdram_init
+ 50. Parameter Settings for User Entity Instance: fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component
+ 51. Parameter Settings for User Entity Instance: fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component
+ 52. dcfifo Parameter Settings by Entity Instance
+ 53. Port Connectivity Checks: "fifo_rd:sd_rd_fifo"
+ 54. Port Connectivity Checks: "fifo_wr:sd_wr_fifo"
+ 55. Port Connectivity Checks: "sdram_control:sdram_control"
+ 56. Elapsed Time Per Partition
+ 57. Analysis & Synthesis Messages
+ 58. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++-------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status         ; Successful - Tue May 09 11:36:04 2023       ;
+; Quartus II 64-Bit Version           ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                       ; Sdram_Control                               ;
+; Top-level Entity Name               ; sdram_control_top                           ;
+; Family                              ; Cyclone V                                   ;
+; Logic utilization (in ALMs)         ; N/A                                         ;
+; Total registers                     ; 452                                         ;
+; Total pins                          ; 193                                         ;
+; Total virtual pins                  ; 0                                           ;
+; Total block memory bits             ; 8,192                                       ;
+; Total DSP Blocks                    ; 0                                           ;
+; Total HSSI RX PCSs                  ; 0                                           ;
+; Total HSSI PMA RX Deserializers     ; 0                                           ;
+; Total HSSI PMA RX ATT Deserializers ; 0                                           ;
+; Total HSSI TX PCSs                  ; 0                                           ;
+; Total HSSI PMA TX Serializers       ; 0                                           ;
+; Total HSSI PMA TX ATT Serializers   ; 0                                           ;
+; Total PLLs                          ; 0                                           ;
+; Total DLLs                          ; 0                                           ;
++-------------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; sdram_control_top  ; Sdram_Control      ;
+; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
+;     Processors 5-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+; ../src/Sdram_Params.h            ; yes             ; User Unspecified File        ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/src/Sdram_Params.h            ;         ;
+; ../src/sdram_init.v              ; yes             ; User Verilog HDL File        ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/src/sdram_init.v              ;         ;
+; ../src/sdram_control_top.v       ; yes             ; User Verilog HDL File        ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/src/sdram_control_top.v       ;         ;
+; ../src/sdram_control.v           ; yes             ; User Verilog HDL File        ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/src/sdram_control.v           ;         ;
+; ../core/fifo_wr.v                ; yes             ; User Wizard-Generated File   ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/core/fifo_wr.v                ;         ;
+; ../core/fifo_rd.v                ; yes             ; User Wizard-Generated File   ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/core/fifo_rd.v                ;         ;
+; dcfifo.tdf                       ; yes             ; Megafunction                 ; f:/altera/13.0/quartus/libraries/megafunctions/dcfifo.tdf                   ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; f:/altera/13.0/quartus/libraries/megafunctions/lpm_counter.inc              ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; f:/altera/13.0/quartus/libraries/megafunctions/lpm_add_sub.inc              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; f:/altera/13.0/quartus/libraries/megafunctions/altdpram.inc                 ;         ;
+; a_graycounter.inc                ; yes             ; Megafunction                 ; f:/altera/13.0/quartus/libraries/megafunctions/a_graycounter.inc            ;         ;
+; a_fefifo.inc                     ; yes             ; Megafunction                 ; f:/altera/13.0/quartus/libraries/megafunctions/a_fefifo.inc                 ;         ;
+; a_gray2bin.inc                   ; yes             ; Megafunction                 ; f:/altera/13.0/quartus/libraries/megafunctions/a_gray2bin.inc               ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                 ; f:/altera/13.0/quartus/libraries/megafunctions/dffpipe.inc                  ;         ;
+; alt_sync_fifo.inc                ; yes             ; Megafunction                 ; f:/altera/13.0/quartus/libraries/megafunctions/alt_sync_fifo.inc            ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; f:/altera/13.0/quartus/libraries/megafunctions/lpm_compare.inc              ;         ;
+; altsyncram_fifo.inc              ; yes             ; Megafunction                 ; f:/altera/13.0/quartus/libraries/megafunctions/altsyncram_fifo.inc          ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; f:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc               ;         ;
+; db/dcfifo_0or1.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/dev/db/dcfifo_0or1.tdf        ;         ;
+; db/a_gray2bin_g9b.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/dev/db/a_gray2bin_g9b.tdf     ;         ;
+; db/a_graycounter_fu6.tdf         ; yes             ; Auto-Generated Megafunction  ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/dev/db/a_graycounter_fu6.tdf  ;         ;
+; db/a_graycounter_bcc.tdf         ; yes             ; Auto-Generated Megafunction  ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/dev/db/a_graycounter_bcc.tdf  ;         ;
+; db/altsyncram_3j71.tdf           ; yes             ; Auto-Generated Megafunction  ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/dev/db/altsyncram_3j71.tdf    ;         ;
+; db/dffpipe_3dc.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/dev/db/dffpipe_3dc.tdf        ;         ;
+; db/dffpipe_gd9.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/dev/db/dffpipe_gd9.tdf        ;         ;
+; db/alt_synch_pipe_nc8.tdf        ; yes             ; Auto-Generated Megafunction  ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/dev/db/alt_synch_pipe_nc8.tdf ;         ;
+; db/dffpipe_jd9.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/dev/db/dffpipe_jd9.tdf        ;         ;
+; db/alt_synch_pipe_oc8.tdf        ; yes             ; Auto-Generated Megafunction  ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/dev/db/alt_synch_pipe_oc8.tdf ;         ;
+; db/dffpipe_kd9.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/dev/db/dffpipe_kd9.tdf        ;         ;
+; db/cmpr_1v5.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/dev/db/cmpr_1v5.tdf           ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 455         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 747         ;
+;     -- 7 input functions                    ; 1           ;
+;     -- 6 input functions                    ; 146         ;
+;     -- 5 input functions                    ; 46          ;
+;     -- 4 input functions                    ; 172         ;
+;     -- <=3 input functions                  ; 382         ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 452         ;
+;                                             ;             ;
+; I/O pins                                    ; 193         ;
+; Total MLAB memory bits                      ; 0           ;
+; Total block memory bits                     ; 8192        ;
+; Total DSP Blocks                            ; 0           ;
+; Maximum fan-out node                        ; Rst_n~input ;
+; Maximum fan-out                             ; 314         ;
+; Total fan-out                               ; 5296        ;
+; Average fan-out                             ; 3.24        ;
++---------------------------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                ;
++-----------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                       ; Library Name ;
++-----------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |sdram_control_top                            ; 747 (316)         ; 452 (50)     ; 8192              ; 0          ; 193  ; 0            ; |sdram_control_top                                                                                                                        ;              ;
+;    |fifo_rd:sd_rd_fifo|                       ; 93 (0)            ; 123 (0)      ; 4096              ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo                                                                                                     ;              ;
+;       |dcfifo:dcfifo_component|               ; 93 (0)            ; 123 (0)      ; 4096              ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component                                                                             ;              ;
+;          |dcfifo_0or1:auto_generated|         ; 93 (23)           ; 123 (27)     ; 4096              ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated                                                  ;              ;
+;             |a_gray2bin_g9b:rdptr_g_gray2bin| ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_gray2bin_g9b:rdptr_g_gray2bin                  ;              ;
+;             |a_gray2bin_g9b:rs_dgwp_gray2bin| ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_gray2bin_g9b:rs_dgwp_gray2bin                  ;              ;
+;             |a_gray2bin_g9b:wrptr_g_gray2bin| ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_gray2bin_g9b:wrptr_g_gray2bin                  ;              ;
+;             |a_gray2bin_g9b:ws_dgrp_gray2bin| ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_gray2bin_g9b:ws_dgrp_gray2bin                  ;              ;
+;             |a_graycounter_bcc:wrptr_g1p|     ; 15 (15)           ; 12 (12)      ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_bcc:wrptr_g1p                      ;              ;
+;             |a_graycounter_fu6:rdptr_g1p|     ; 17 (17)           ; 12 (12)      ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_fu6:rdptr_g1p                      ;              ;
+;             |alt_synch_pipe_nc8:rs_dgwp|      ; 0 (0)             ; 18 (0)       ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_nc8:rs_dgwp                       ;              ;
+;                |dffpipe_jd9:dffpipe12|        ; 0 (0)             ; 18 (18)      ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_nc8:rs_dgwp|dffpipe_jd9:dffpipe12 ;              ;
+;             |alt_synch_pipe_oc8:ws_dgrp|      ; 0 (0)             ; 18 (0)       ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_oc8:ws_dgrp                       ;              ;
+;                |dffpipe_kd9:dffpipe15|        ; 0 (0)             ; 18 (18)      ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_oc8:ws_dgrp|dffpipe_kd9:dffpipe15 ;              ;
+;             |altsyncram_3j71:fifo_ram|        ; 0 (0)             ; 0 (0)        ; 4096              ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|altsyncram_3j71:fifo_ram                         ;              ;
+;             |cmpr_1v5:rdempty_eq_comp|        ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|cmpr_1v5:rdempty_eq_comp                         ;              ;
+;             |cmpr_1v5:wrfull_eq_comp|         ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|cmpr_1v5:wrfull_eq_comp                          ;              ;
+;             |dffpipe_3dc:rdaclr|              ; 0 (0)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_3dc:rdaclr                               ;              ;
+;             |dffpipe_3dc:wraclr|              ; 0 (0)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_3dc:wraclr                               ;              ;
+;             |dffpipe_gd9:rs_brp|              ; 0 (0)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_brp                               ;              ;
+;             |dffpipe_gd9:rs_bwp|              ; 0 (0)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_bwp                               ;              ;
+;             |dffpipe_gd9:ws_brp|              ; 0 (0)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:ws_brp                               ;              ;
+;             |dffpipe_gd9:ws_bwp|              ; 0 (0)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:ws_bwp                               ;              ;
+;    |fifo_wr:sd_wr_fifo|                       ; 92 (0)            ; 123 (0)      ; 4096              ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo                                                                                                     ;              ;
+;       |dcfifo:dcfifo_component|               ; 92 (0)            ; 123 (0)      ; 4096              ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component                                                                             ;              ;
+;          |dcfifo_0or1:auto_generated|         ; 92 (23)           ; 123 (27)     ; 4096              ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated                                                  ;              ;
+;             |a_gray2bin_g9b:rdptr_g_gray2bin| ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_gray2bin_g9b:rdptr_g_gray2bin                  ;              ;
+;             |a_gray2bin_g9b:rs_dgwp_gray2bin| ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_gray2bin_g9b:rs_dgwp_gray2bin                  ;              ;
+;             |a_gray2bin_g9b:wrptr_g_gray2bin| ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_gray2bin_g9b:wrptr_g_gray2bin                  ;              ;
+;             |a_gray2bin_g9b:ws_dgrp_gray2bin| ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_gray2bin_g9b:ws_dgrp_gray2bin                  ;              ;
+;             |a_graycounter_bcc:wrptr_g1p|     ; 16 (16)           ; 12 (12)      ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_bcc:wrptr_g1p                      ;              ;
+;             |a_graycounter_fu6:rdptr_g1p|     ; 15 (15)           ; 12 (12)      ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_fu6:rdptr_g1p                      ;              ;
+;             |alt_synch_pipe_nc8:rs_dgwp|      ; 0 (0)             ; 18 (0)       ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_nc8:rs_dgwp                       ;              ;
+;                |dffpipe_jd9:dffpipe12|        ; 0 (0)             ; 18 (18)      ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_nc8:rs_dgwp|dffpipe_jd9:dffpipe12 ;              ;
+;             |alt_synch_pipe_oc8:ws_dgrp|      ; 0 (0)             ; 18 (0)       ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_oc8:ws_dgrp                       ;              ;
+;                |dffpipe_kd9:dffpipe15|        ; 0 (0)             ; 18 (18)      ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_oc8:ws_dgrp|dffpipe_kd9:dffpipe15 ;              ;
+;             |altsyncram_3j71:fifo_ram|        ; 0 (0)             ; 0 (0)        ; 4096              ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|altsyncram_3j71:fifo_ram                         ;              ;
+;             |cmpr_1v5:rdempty_eq_comp|        ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|cmpr_1v5:rdempty_eq_comp                         ;              ;
+;             |cmpr_1v5:wrfull_eq_comp|         ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|cmpr_1v5:wrfull_eq_comp                          ;              ;
+;             |dffpipe_3dc:rdaclr|              ; 0 (0)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_3dc:rdaclr                               ;              ;
+;             |dffpipe_3dc:wraclr|              ; 0 (0)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_3dc:wraclr                               ;              ;
+;             |dffpipe_gd9:rs_brp|              ; 0 (0)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_brp                               ;              ;
+;             |dffpipe_gd9:rs_bwp|              ; 0 (0)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_bwp                               ;              ;
+;             |dffpipe_gd9:ws_brp|              ; 0 (0)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:ws_brp                               ;              ;
+;             |dffpipe_gd9:ws_bwp|              ; 0 (0)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:ws_bwp                               ;              ;
+;    |sdram_control:sdram_control|              ; 246 (209)         ; 156 (135)    ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|sdram_control:sdram_control                                                                                            ;              ;
+;       |sdram_init:sdram_init|                 ; 37 (37)           ; 21 (21)      ; 0                 ; 0          ; 0    ; 0            ; |sdram_control_top|sdram_control:sdram_control|sdram_init:sdram_init                                                                      ;              ;
++-----------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                              ;
++-----------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                      ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-----------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|altsyncram_3j71:fifo_ram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 16           ; 256          ; 16           ; 4096 ; None ;
+; fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|altsyncram_3j71:fifo_ram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 16           ; 256          ; 16           ; 4096 ; None ;
++-----------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                ;
++--------+--------------+---------+--------------+--------------+---------------------------------------+--------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                       ; IP Include File                                              ;
++--------+--------------+---------+--------------+--------------+---------------------------------------+--------------------------------------------------------------+
+; Altera ; FIFO         ; 13.0    ; N/A          ; N/A          ; |sdram_control_top|fifo_rd:sd_rd_fifo ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/core/fifo_rd.v ;
+; Altera ; FIFO         ; 13.0    ; N/A          ; N/A          ; |sdram_control_top|fifo_wr:sd_wr_fifo ; E:/work_2/licheng/SDRAM/class32_Sdram_Control/core/fifo_wr.v ;
++--------+--------------+---------+--------------+--------------+---------------------------------------+--------------------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------+
+; State Machine - |sdram_control_top|sdram_control:sdram_control|main_state                 ;
++------------------+-----------------+------------------+-----------------+-----------------+
+; Name             ; main_state.READ ; main_state.WRITE ; main_state.AREF ; main_state.IDLE ;
++------------------+-----------------+------------------+-----------------+-----------------+
+; main_state.IDLE  ; 0               ; 0                ; 0               ; 0               ;
+; main_state.AREF  ; 0               ; 0                ; 1               ; 1               ;
+; main_state.WRITE ; 0               ; 1                ; 0               ; 1               ;
+; main_state.READ  ; 1               ; 0                ; 0               ; 1               ;
++------------------+-----------------+------------------+-----------------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; sd_raddr[0]                                         ; sd_baddr[0]         ; yes                    ;
+; sdram_control:sdram_control|ref_break_rd            ; GND                 ; yes                    ;
+; sdram_control:sdram_control|ref_break_wr            ; GND                 ; yes                    ;
+; sdram_control:sdram_control|rd_break_ref            ; GND                 ; yes                    ;
+; sdram_control:sdram_control|wr_break_ref            ; GND                 ; yes                    ;
+; sd_caddr[0]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_raddr[1]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_caddr[1]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_raddr[2]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_caddr[2]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_raddr[3]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_caddr[3]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_raddr[4]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_caddr[4]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_raddr[5]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_caddr[5]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_raddr[6]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_caddr[6]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_raddr[7]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_caddr[7]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_raddr[8]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_caddr[8]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_raddr[9]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_raddr[10]                                        ; sd_baddr[0]         ; yes                    ;
+; sd_raddr[11]                                        ; sd_baddr[0]         ; yes                    ;
+; sd_raddr[12]                                        ; sd_baddr[0]         ; yes                    ;
+; sd_baddr[0]                                         ; sd_baddr[0]         ; yes                    ;
+; sd_baddr[1]                                         ; sd_baddr[0]         ; yes                    ;
+; Number of user-specified and inferred latches = 28  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                           ;
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+; Register name                                                                                       ; Reason for Removal                                                     ;
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+; sdram_control:sdram_control|sdram_init:sdram_init|Command[3]                                        ; Stuck at GND due to stuck port data_in                                 ;
+; sdram_control:sdram_control|sdram_init:sdram_init|Saddr[2,3,6..9,11,12]                             ; Stuck at GND due to stuck port data_in                                 ;
+; fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:ws_bwp|dffe14a[8] ; Lost fanout                                                            ;
+; fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:ws_brp|dffe14a[8] ; Lost fanout                                                            ;
+; fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_bwp|dffe14a[8] ; Lost fanout                                                            ;
+; fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_brp|dffe14a[8] ; Lost fanout                                                            ;
+; fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:ws_bwp|dffe14a[8] ; Lost fanout                                                            ;
+; fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:ws_brp|dffe14a[8] ; Lost fanout                                                            ;
+; fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_bwp|dffe14a[8] ; Lost fanout                                                            ;
+; fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_brp|dffe14a[8] ; Lost fanout                                                            ;
+; sdram_control:sdram_control|sdram_init:sdram_init|Saddr[1,4,5]                                      ; Merged with sdram_control:sdram_control|sdram_init:sdram_init|Saddr[0] ;
+; sdram_control:sdram_control|Command[3]                                                              ; Stuck at GND due to stuck port data_in                                 ;
+; Total Number of Removed Registers = 21                                                              ;                                                                        ;
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                       ;
++--------------------------------------------------------------+---------------------------+----------------------------------------+
+; Register name                                                ; Reason for Removal        ; Registers Removed due to This Register ;
++--------------------------------------------------------------+---------------------------+----------------------------------------+
+; sdram_control:sdram_control|sdram_init:sdram_init|Command[3] ; Stuck at GND              ; sdram_control:sdram_control|Command[3] ;
+;                                                              ; due to stuck port data_in ;                                        ;
++--------------------------------------------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 452   ;
+; Number of registers using Synchronous Clear  ; 100   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 434   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 185   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                           ;
++--------------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                            ; Fan out ;
++--------------------------------------------------------------------------------------------------------------+---------+
+; fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_bcc:wrptr_g1p|counter8a0 ; 10      ;
+; fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_fu6:rdptr_g1p|counter5a0 ; 7       ;
+; sdram_control:sdram_control|FF                                                                               ; 15      ;
+; sdram_control:sdram_control|sdram_init:sdram_init|Command[2]                                                 ; 1       ;
+; sdram_control:sdram_control|sdram_init:sdram_init|Command[1]                                                 ; 1       ;
+; sdram_control:sdram_control|sdram_init:sdram_init|Command[0]                                                 ; 1       ;
+; fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_bcc:wrptr_g1p|parity9    ; 2       ;
+; fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_bcc:wrptr_g1p|counter8a0 ; 6       ;
+; fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_fu6:rdptr_g1p|parity6    ; 4       ;
+; fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_fu6:rdptr_g1p|counter5a0 ; 6       ;
+; fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_bcc:wrptr_g1p|parity9    ; 4       ;
+; fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_fu6:rdptr_g1p|parity6    ; 3       ;
+; Total number of inverted registers = 12                                                                      ;         ;
++--------------------------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |sdram_control_top|sdram_control:sdram_control|ref_time_cnt[10] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |sdram_control_top|sdram_control:sdram_control|wr_cnt[15]       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |sdram_control_top|sdram_control:sdram_control|rd_cnt[13]       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |sdram_control_top|sdram_control:sdram_control|ref_cnt[13]      ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |sdram_control_top|sdram_control:sdram_control|Sa[9]            ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |sdram_control_top|sdram_control:sdram_control|Ba[0]            ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |sdram_control_top|sdram_control:sdram_control|Command[0]       ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |sdram_control_top|sdram_control:sdram_control|Sa[2]            ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |sdram_control_top|sdram_control:sdram_control|Sa[0]            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |sdram_control_top|rd_sdram_addr[2]                             ;
+; 4:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |sdram_control_top|rd_sdram_addr[17]                            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |sdram_control_top|wr_sdram_addr[0]                             ;
+; 4:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |sdram_control_top|wr_sdram_addr[16]                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component ;
++---------------------------------+-------+------+------------------+
+; Assignment                      ; Value ; From ; To               ;
++---------------------------------+-------+------+------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                ;
++---------------------------------+-------+------+------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated ;
++---------------------------------+-------+------+---------------------------------------------+
+; Assignment                      ; Value ; From ; To                                          ;
++---------------------------------+-------+------+---------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                           ;
+; REMOVE_DUPLICATE_REGISTERS      ; OFF   ; -    ; -                                           ;
+; POWER_UP_LEVEL                  ; LOW   ; -    ; wrptr_g                                     ;
++---------------------------------+-------+------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_fu6:rdptr_g1p ;
++----------------+-------+------+------------------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                       ;
++----------------+-------+------+------------------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; HIGH  ; -    ; counter5a0                                                                               ;
+; POWER_UP_LEVEL ; HIGH  ; -    ; parity6                                                                                  ;
++----------------+-------+------+------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_bcc:wrptr_g1p ;
++----------------+-------+------+------------------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                       ;
++----------------+-------+------+------------------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; HIGH  ; -    ; counter8a0                                                                               ;
+; POWER_UP_LEVEL ; HIGH  ; -    ; parity9                                                                                  ;
++----------------+-------+------+------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|altsyncram_3j71:fifo_ram ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                      ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                       ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_3dc:rdaclr ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                             ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                              ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_brp ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                             ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                              ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_bwp ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                             ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                              ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_nc8:rs_dgwp ;
++-----------------------+-------+------+----------------------------------------------------------------------------------+
+; Assignment            ; Value ; From ; To                                                                               ;
++-----------------------+-------+------+----------------------------------------------------------------------------------+
+; X_ON_VIOLATION_OPTION ; OFF   ; -    ; -                                                                                ;
++-----------------------+-------+------+----------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_nc8:rs_dgwp|dffpipe_jd9:dffpipe12 ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                           ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                            ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_3dc:wraclr ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                             ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                              ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:ws_brp ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                             ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                              ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:ws_bwp ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                             ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                              ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_oc8:ws_dgrp ;
++-----------------------+-------+------+----------------------------------------------------------------------------------+
+; Assignment            ; Value ; From ; To                                                                               ;
++-----------------------+-------+------+----------------------------------------------------------------------------------+
+; X_ON_VIOLATION_OPTION ; OFF   ; -    ; -                                                                                ;
++-----------------------+-------+------+----------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_oc8:ws_dgrp|dffpipe_kd9:dffpipe15 ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                           ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                            ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component ;
++---------------------------------+-------+------+------------------+
+; Assignment                      ; Value ; From ; To               ;
++---------------------------------+-------+------+------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                ;
++---------------------------------+-------+------+------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated ;
++---------------------------------+-------+------+---------------------------------------------+
+; Assignment                      ; Value ; From ; To                                          ;
++---------------------------------+-------+------+---------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                           ;
+; REMOVE_DUPLICATE_REGISTERS      ; OFF   ; -    ; -                                           ;
+; POWER_UP_LEVEL                  ; LOW   ; -    ; wrptr_g                                     ;
++---------------------------------+-------+------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_fu6:rdptr_g1p ;
++----------------+-------+------+------------------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                       ;
++----------------+-------+------+------------------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; HIGH  ; -    ; counter5a0                                                                               ;
+; POWER_UP_LEVEL ; HIGH  ; -    ; parity6                                                                                  ;
++----------------+-------+------+------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_bcc:wrptr_g1p ;
++----------------+-------+------+------------------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                       ;
++----------------+-------+------+------------------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; HIGH  ; -    ; counter8a0                                                                               ;
+; POWER_UP_LEVEL ; HIGH  ; -    ; parity9                                                                                  ;
++----------------+-------+------+------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|altsyncram_3j71:fifo_ram ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                      ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                       ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_3dc:rdaclr ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                             ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                              ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_brp ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                             ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                              ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_bwp ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                             ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                              ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_nc8:rs_dgwp ;
++-----------------------+-------+------+----------------------------------------------------------------------------------+
+; Assignment            ; Value ; From ; To                                                                               ;
++-----------------------+-------+------+----------------------------------------------------------------------------------+
+; X_ON_VIOLATION_OPTION ; OFF   ; -    ; -                                                                                ;
++-----------------------+-------+------+----------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_nc8:rs_dgwp|dffpipe_jd9:dffpipe12 ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                           ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                            ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_3dc:wraclr ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                             ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                              ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:ws_brp ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                             ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                              ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:ws_bwp ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                             ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                              ;
++---------------------------------+-------+------+----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_oc8:ws_dgrp ;
++-----------------------+-------+------+----------------------------------------------------------------------------------+
+; Assignment            ; Value ; From ; To                                                                               ;
++-----------------------+-------+------+----------------------------------------------------------------------------------+
+; X_ON_VIOLATION_OPTION ; OFF   ; -    ; -                                                                                ;
++-----------------------+-------+------+----------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_oc8:ws_dgrp|dffpipe_kd9:dffpipe15 ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                           ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                            ;
++---------------------------------+-------+------+----------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |sdram_control_top ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; C_NOP          ; 0111  ; Unsigned Binary                                          ;
+; C_PRE          ; 0010  ; Unsigned Binary                                          ;
+; C_AREF         ; 0001  ; Unsigned Binary                                          ;
+; C_MSET         ; 0000  ; Unsigned Binary                                          ;
+; C_ACT          ; 0011  ; Unsigned Binary                                          ;
+; C_RD           ; 0101  ; Unsigned Binary                                          ;
+; C_WR           ; 0100  ; Unsigned Binary                                          ;
+; INIT_PRE       ; 20000 ; Signed Integer                                           ;
+; REF_PRE        ; 3     ; Signed Integer                                           ;
+; REF_REF        ; 10    ; Signed Integer                                           ;
+; AUTO_REF       ; 1560  ; Signed Integer                                           ;
+; LMR_ACT        ; 2     ; Signed Integer                                           ;
+; WR_PRE         ; 2     ; Signed Integer                                           ;
+; SC_RCD         ; 3     ; Signed Integer                                           ;
+; SC_CL          ; 3     ; Signed Integer                                           ;
+; SC_BL          ; 8     ; Signed Integer                                           ;
+; OP_CODE        ; 0     ; Unsigned Binary                                          ;
+; SDR_BL         ; 011   ; Unsigned Binary                                          ;
+; SDR_BT         ; 0     ; Unsigned Binary                                          ;
+; SDR_CL         ; 011   ; Unsigned Binary                                          ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sdram_control:sdram_control ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; C_NOP          ; 0111  ; Unsigned Binary                                 ;
+; C_PRE          ; 0010  ; Unsigned Binary                                 ;
+; C_AREF         ; 0001  ; Unsigned Binary                                 ;
+; C_MSET         ; 0000  ; Unsigned Binary                                 ;
+; C_ACT          ; 0011  ; Unsigned Binary                                 ;
+; C_RD           ; 0101  ; Unsigned Binary                                 ;
+; C_WR           ; 0100  ; Unsigned Binary                                 ;
+; INIT_PRE       ; 20000 ; Signed Integer                                  ;
+; REF_PRE        ; 3     ; Signed Integer                                  ;
+; REF_REF        ; 10    ; Signed Integer                                  ;
+; AUTO_REF       ; 1560  ; Signed Integer                                  ;
+; LMR_ACT        ; 2     ; Signed Integer                                  ;
+; WR_PRE         ; 2     ; Signed Integer                                  ;
+; SC_RCD         ; 3     ; Signed Integer                                  ;
+; SC_CL          ; 3     ; Signed Integer                                  ;
+; SC_BL          ; 8     ; Signed Integer                                  ;
+; OP_CODE        ; 0     ; Unsigned Binary                                 ;
+; SDR_BL         ; 011   ; Unsigned Binary                                 ;
+; SDR_BT         ; 0     ; Unsigned Binary                                 ;
+; SDR_CL         ; 011   ; Unsigned Binary                                 ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sdram_control:sdram_control|sdram_init:sdram_init ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; C_NOP          ; 0111  ; Unsigned Binary                                                       ;
+; C_PRE          ; 0010  ; Unsigned Binary                                                       ;
+; C_AREF         ; 0001  ; Unsigned Binary                                                       ;
+; C_MSET         ; 0000  ; Unsigned Binary                                                       ;
+; C_ACT          ; 0011  ; Unsigned Binary                                                       ;
+; C_RD           ; 0101  ; Unsigned Binary                                                       ;
+; C_WR           ; 0100  ; Unsigned Binary                                                       ;
+; INIT_PRE       ; 20000 ; Signed Integer                                                        ;
+; REF_PRE        ; 3     ; Signed Integer                                                        ;
+; REF_REF        ; 10    ; Signed Integer                                                        ;
+; AUTO_REF       ; 1560  ; Signed Integer                                                        ;
+; LMR_ACT        ; 2     ; Signed Integer                                                        ;
+; WR_PRE         ; 2     ; Signed Integer                                                        ;
+; SC_RCD         ; 3     ; Signed Integer                                                        ;
+; SC_CL          ; 3     ; Signed Integer                                                        ;
+; SC_BL          ; 8     ; Signed Integer                                                        ;
+; OP_CODE        ; 0     ; Unsigned Binary                                                       ;
+; SDR_BL         ; 011   ; Unsigned Binary                                                       ;
+; SDR_BT         ; 0     ; Unsigned Binary                                                       ;
+; SDR_CL         ; 011   ; Unsigned Binary                                                       ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component ;
++-------------------------+-------------+-------------------------------------------------+
+; Parameter Name          ; Value       ; Type                                            ;
++-------------------------+-------------+-------------------------------------------------+
+; WIDTH_BYTEENA           ; 1           ; Untyped                                         ;
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                                  ;
+; LPM_WIDTH               ; 16          ; Signed Integer                                  ;
+; LPM_NUMWORDS            ; 256         ; Signed Integer                                  ;
+; LPM_WIDTHU              ; 8           ; Signed Integer                                  ;
+; LPM_SHOWAHEAD           ; ON          ; Untyped                                         ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                         ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                         ;
+; USE_EAB                 ; ON          ; Untyped                                         ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                         ;
+; DELAY_RDUSEDW           ; 1           ; Untyped                                         ;
+; DELAY_WRUSEDW           ; 1           ; Untyped                                         ;
+; RDSYNC_DELAYPIPE        ; 4           ; Signed Integer                                  ;
+; WRSYNC_DELAYPIPE        ; 4           ; Signed Integer                                  ;
+; CLOCKS_ARE_SYNCHRONIZED ; FALSE       ; Untyped                                         ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                         ;
+; DEVICE_FAMILY           ; Cyclone V   ; Untyped                                         ;
+; ADD_USEDW_MSB_BIT       ; OFF         ; Untyped                                         ;
+; WRITE_ACLR_SYNCH        ; ON          ; Untyped                                         ;
+; READ_ACLR_SYNCH         ; ON          ; Untyped                                         ;
+; CBXI_PARAMETER          ; dcfifo_0or1 ; Untyped                                         ;
++-------------------------+-------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component ;
++-------------------------+-------------+-------------------------------------------------+
+; Parameter Name          ; Value       ; Type                                            ;
++-------------------------+-------------+-------------------------------------------------+
+; WIDTH_BYTEENA           ; 1           ; Untyped                                         ;
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                                  ;
+; LPM_WIDTH               ; 16          ; Signed Integer                                  ;
+; LPM_NUMWORDS            ; 256         ; Signed Integer                                  ;
+; LPM_WIDTHU              ; 8           ; Signed Integer                                  ;
+; LPM_SHOWAHEAD           ; ON          ; Untyped                                         ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                         ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                         ;
+; USE_EAB                 ; ON          ; Untyped                                         ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                         ;
+; DELAY_RDUSEDW           ; 1           ; Untyped                                         ;
+; DELAY_WRUSEDW           ; 1           ; Untyped                                         ;
+; RDSYNC_DELAYPIPE        ; 4           ; Signed Integer                                  ;
+; WRSYNC_DELAYPIPE        ; 4           ; Signed Integer                                  ;
+; CLOCKS_ARE_SYNCHRONIZED ; FALSE       ; Untyped                                         ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                         ;
+; DEVICE_FAMILY           ; Cyclone V   ; Untyped                                         ;
+; ADD_USEDW_MSB_BIT       ; OFF         ; Untyped                                         ;
+; WRITE_ACLR_SYNCH        ; ON          ; Untyped                                         ;
+; READ_ACLR_SYNCH         ; ON          ; Untyped                                         ;
+; CBXI_PARAMETER          ; dcfifo_0or1 ; Untyped                                         ;
++-------------------------+-------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; dcfifo Parameter Settings by Entity Instance                            ;
++----------------------------+--------------------------------------------+
+; Name                       ; Value                                      ;
++----------------------------+--------------------------------------------+
+; Number of entity instances ; 2                                          ;
+; Entity Instance            ; fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component ;
+;     -- FIFO Type           ; Dual Clock                                 ;
+;     -- LPM_WIDTH           ; 16                                         ;
+;     -- LPM_NUMWORDS        ; 256                                        ;
+;     -- LPM_SHOWAHEAD       ; ON                                         ;
+;     -- USE_EAB             ; ON                                         ;
+; Entity Instance            ; fifo_rd:sd_rd_fifo|dcfifo:dcfifo_component ;
+;     -- FIFO Type           ; Dual Clock                                 ;
+;     -- LPM_WIDTH           ; 16                                         ;
+;     -- LPM_NUMWORDS        ; 256                                        ;
+;     -- LPM_SHOWAHEAD       ; ON                                         ;
+;     -- USE_EAB             ; ON                                         ;
++----------------------------+--------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fifo_rd:sd_rd_fifo"                                                                          ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; wrfull        ; Output ; Info     ; Explicitly unconnected                                                              ;
+; wrusedw[6..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "fifo_wr:sd_wr_fifo"       ;
++---------+--------+----------+------------------------+
+; Port    ; Type   ; Severity ; Details                ;
++---------+--------+----------+------------------------+
+; rdempty ; Output ; Info     ; Explicitly unconnected ;
++---------+--------+----------+------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "sdram_control:sdram_control" ;
++--------------+-------+----------+-----------------------+
+; Port         ; Type  ; Severity ; Details               ;
++--------------+-------+----------+-----------------------+
+; Caddr[12..9] ; Input ; Info     ; Stuck at GND          ;
++--------------+-------+----------+-----------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Tue May 09 11:36:01 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Sdram_Control -c Sdram_Control
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file /work_2/licheng/sdram/class32_sdram_control/src/sdram_init.v
+    Info (12023): Found entity 1: sdram_init
+Info (12021): Found 1 design units, including 1 entities, in source file /work_2/licheng/sdram/class32_sdram_control/src/sdram_control_top.v
+    Info (12023): Found entity 1: sdram_control_top
+Info (12021): Found 1 design units, including 1 entities, in source file /work_2/licheng/sdram/class32_sdram_control/src/sdram_control.v
+    Info (12023): Found entity 1: sdram_control
+Info (12021): Found 1 design units, including 1 entities, in source file /work_2/licheng/sdram/class32_sdram_control/sim/sdram_init_tb.v
+    Info (12023): Found entity 1: sdram_init_tb
+Info (12021): Found 1 design units, including 1 entities, in source file /work_2/licheng/sdram/class32_sdram_control/sim/sdram_control_top_tb.v
+    Info (12023): Found entity 1: sdram_control_top_tb
+Info (12021): Found 1 design units, including 1 entities, in source file /work_2/licheng/sdram/class32_sdram_control/sim/sdram_control_tb.v
+    Info (12023): Found entity 1: sdram_control_tb
+Info (12021): Found 1 design units, including 1 entities, in source file /work_2/licheng/sdram/class32_sdram_control/sim/sdr.v
+    Info (12023): Found entity 1: sdr
+Info (12021): Found 1 design units, including 1 entities, in source file /work_2/licheng/sdram/class32_sdram_control/core/fifo_wr.v
+    Info (12023): Found entity 1: fifo_wr
+Info (12021): Found 1 design units, including 1 entities, in source file /work_2/licheng/sdram/class32_sdram_control/core/fifo_rd.v
+    Info (12023): Found entity 1: fifo_rd
+Info (12127): Elaborating entity "sdram_control_top" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at sdram_control_top.v(165): truncated value with size 32 to match size of target (24)
+Warning (10230): Verilog HDL assignment warning at sdram_control_top.v(182): truncated value with size 32 to match size of target (24)
+Warning (10240): Verilog HDL Always Construct warning at sdram_control_top.v(217): inferring latch(es) for variable "sd_caddr", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at sdram_control_top.v(230): inferring latch(es) for variable "sd_raddr", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at sdram_control_top.v(243): inferring latch(es) for variable "sd_baddr", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "sd_baddr[0]" at sdram_control_top.v(245)
+Info (10041): Inferred latch for "sd_baddr[1]" at sdram_control_top.v(245)
+Info (10041): Inferred latch for "sd_raddr[0]" at sdram_control_top.v(232)
+Info (10041): Inferred latch for "sd_raddr[1]" at sdram_control_top.v(232)
+Info (10041): Inferred latch for "sd_raddr[2]" at sdram_control_top.v(232)
+Info (10041): Inferred latch for "sd_raddr[3]" at sdram_control_top.v(232)
+Info (10041): Inferred latch for "sd_raddr[4]" at sdram_control_top.v(232)
+Info (10041): Inferred latch for "sd_raddr[5]" at sdram_control_top.v(232)
+Info (10041): Inferred latch for "sd_raddr[6]" at sdram_control_top.v(232)
+Info (10041): Inferred latch for "sd_raddr[7]" at sdram_control_top.v(232)
+Info (10041): Inferred latch for "sd_raddr[8]" at sdram_control_top.v(232)
+Info (10041): Inferred latch for "sd_raddr[9]" at sdram_control_top.v(232)
+Info (10041): Inferred latch for "sd_raddr[10]" at sdram_control_top.v(232)
+Info (10041): Inferred latch for "sd_raddr[11]" at sdram_control_top.v(232)
+Info (10041): Inferred latch for "sd_raddr[12]" at sdram_control_top.v(232)
+Info (10041): Inferred latch for "sd_caddr[0]" at sdram_control_top.v(219)
+Info (10041): Inferred latch for "sd_caddr[1]" at sdram_control_top.v(219)
+Info (10041): Inferred latch for "sd_caddr[2]" at sdram_control_top.v(219)
+Info (10041): Inferred latch for "sd_caddr[3]" at sdram_control_top.v(219)
+Info (10041): Inferred latch for "sd_caddr[4]" at sdram_control_top.v(219)
+Info (10041): Inferred latch for "sd_caddr[5]" at sdram_control_top.v(219)
+Info (10041): Inferred latch for "sd_caddr[6]" at sdram_control_top.v(219)
+Info (10041): Inferred latch for "sd_caddr[7]" at sdram_control_top.v(219)
+Info (10041): Inferred latch for "sd_caddr[8]" at sdram_control_top.v(219)
+Info (10041): Inferred latch for "sd_caddr[9]" at sdram_control_top.v(219)
+Info (10041): Inferred latch for "sd_caddr[10]" at sdram_control_top.v(219)
+Info (10041): Inferred latch for "sd_caddr[11]" at sdram_control_top.v(219)
+Info (10041): Inferred latch for "sd_caddr[12]" at sdram_control_top.v(219)
+Info (12128): Elaborating entity "sdram_control" for hierarchy "sdram_control:sdram_control"
+Info (10264): Verilog HDL Case Statement information at sdram_control.v(533): all case item expressions in this case statement are onehot
+Info (10264): Verilog HDL Case Statement information at sdram_control.v(565): all case item expressions in this case statement are onehot
+Info (10264): Verilog HDL Case Statement information at sdram_control.v(599): all case item expressions in this case statement are onehot
+Info (10041): Inferred latch for "rd_break_ref" at sdram_control.v(525)
+Info (10041): Inferred latch for "wr_break_ref" at sdram_control.v(521)
+Info (10041): Inferred latch for "ref_break_rd" at sdram_control.v(517)
+Info (10041): Inferred latch for "ref_break_wr" at sdram_control.v(513)
+Info (12128): Elaborating entity "sdram_init" for hierarchy "sdram_control:sdram_control|sdram_init:sdram_init"
+Info (12128): Elaborating entity "fifo_wr" for hierarchy "fifo_wr:sd_wr_fifo"
+Info (12128): Elaborating entity "dcfifo" for hierarchy "fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component"
+Info (12130): Elaborated megafunction instantiation "fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component"
+Info (12133): Instantiated megafunction "fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component" with the following parameter:
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_numwords" = "256"
+    Info (12134): Parameter "lpm_showahead" = "ON"
+    Info (12134): Parameter "lpm_type" = "dcfifo"
+    Info (12134): Parameter "lpm_width" = "16"
+    Info (12134): Parameter "lpm_widthu" = "8"
+    Info (12134): Parameter "overflow_checking" = "ON"
+    Info (12134): Parameter "rdsync_delaypipe" = "4"
+    Info (12134): Parameter "read_aclr_synch" = "ON"
+    Info (12134): Parameter "underflow_checking" = "ON"
+    Info (12134): Parameter "use_eab" = "ON"
+    Info (12134): Parameter "write_aclr_synch" = "ON"
+    Info (12134): Parameter "wrsync_delaypipe" = "4"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dcfifo_0or1.tdf
+    Info (12023): Found entity 1: dcfifo_0or1
+Info (12128): Elaborating entity "dcfifo_0or1" for hierarchy "fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_gray2bin_g9b.tdf
+    Info (12023): Found entity 1: a_gray2bin_g9b
+Info (12128): Elaborating entity "a_gray2bin_g9b" for hierarchy "fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_gray2bin_g9b:rdptr_g_gray2bin"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_fu6.tdf
+    Info (12023): Found entity 1: a_graycounter_fu6
+Info (12128): Elaborating entity "a_graycounter_fu6" for hierarchy "fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_fu6:rdptr_g1p"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_bcc.tdf
+    Info (12023): Found entity 1: a_graycounter_bcc
+Info (12128): Elaborating entity "a_graycounter_bcc" for hierarchy "fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|a_graycounter_bcc:wrptr_g1p"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3j71.tdf
+    Info (12023): Found entity 1: altsyncram_3j71
+Info (12128): Elaborating entity "altsyncram_3j71" for hierarchy "fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|altsyncram_3j71:fifo_ram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_3dc.tdf
+    Info (12023): Found entity 1: dffpipe_3dc
+Info (12128): Elaborating entity "dffpipe_3dc" for hierarchy "fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_3dc:rdaclr"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_gd9.tdf
+    Info (12023): Found entity 1: dffpipe_gd9
+Info (12128): Elaborating entity "dffpipe_gd9" for hierarchy "fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|dffpipe_gd9:rs_brp"
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_nc8.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_nc8
+Info (12128): Elaborating entity "alt_synch_pipe_nc8" for hierarchy "fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_nc8:rs_dgwp"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_jd9.tdf
+    Info (12023): Found entity 1: dffpipe_jd9
+Info (12128): Elaborating entity "dffpipe_jd9" for hierarchy "fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_nc8:rs_dgwp|dffpipe_jd9:dffpipe12"
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_oc8.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_oc8
+Info (12128): Elaborating entity "alt_synch_pipe_oc8" for hierarchy "fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_oc8:ws_dgrp"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_kd9.tdf
+    Info (12023): Found entity 1: dffpipe_kd9
+Info (12128): Elaborating entity "dffpipe_kd9" for hierarchy "fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|alt_synch_pipe_oc8:ws_dgrp|dffpipe_kd9:dffpipe15"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_1v5.tdf
+    Info (12023): Found entity 1: cmpr_1v5
+Info (12128): Elaborating entity "cmpr_1v5" for hierarchy "fifo_wr:sd_wr_fifo|dcfifo:dcfifo_component|dcfifo_0or1:auto_generated|cmpr_1v5:rdempty_eq_comp"
+Info (12128): Elaborating entity "fifo_rd" for hierarchy "fifo_rd:sd_rd_fifo"
+Warning (13012): Latch sd_raddr[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_caddr[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_raddr[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_caddr[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_raddr[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_caddr[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_raddr[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_caddr[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_raddr[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_caddr[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_raddr[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_caddr[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_raddr[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_caddr[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_raddr[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_caddr[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_raddr[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_caddr[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_raddr[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_raddr[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_raddr[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_raddr[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_baddr[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13012): Latch sd_baddr[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LessThan0~synth
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "rd_sdram_addr[9]" is converted into an equivalent circuit using register "rd_sdram_addr[9]~_emulated" and latch "rd_sdram_addr[9]~1"
+    Warning (13310): Register "wr_sdram_addr[9]" is converted into an equivalent circuit using register "wr_sdram_addr[9]~_emulated" and latch "wr_sdram_addr[9]~1"
+    Warning (13310): Register "rd_sdram_addr[0]" is converted into an equivalent circuit using register "rd_sdram_addr[0]~_emulated" and latch "rd_sdram_addr[0]~5"
+    Warning (13310): Register "wr_sdram_addr[0]" is converted into an equivalent circuit using register "wr_sdram_addr[0]~_emulated" and latch "wr_sdram_addr[0]~5"
+    Warning (13310): Register "rd_sdram_addr[10]" is converted into an equivalent circuit using register "rd_sdram_addr[10]~_emulated" and latch "rd_sdram_addr[10]~9"
+    Warning (13310): Register "wr_sdram_addr[10]" is converted into an equivalent circuit using register "wr_sdram_addr[10]~_emulated" and latch "wr_sdram_addr[10]~9"
+    Warning (13310): Register "rd_sdram_addr[1]" is converted into an equivalent circuit using register "rd_sdram_addr[1]~_emulated" and latch "rd_sdram_addr[1]~13"
+    Warning (13310): Register "wr_sdram_addr[1]" is converted into an equivalent circuit using register "wr_sdram_addr[1]~_emulated" and latch "wr_sdram_addr[1]~13"
+    Warning (13310): Register "rd_sdram_addr[11]" is converted into an equivalent circuit using register "rd_sdram_addr[11]~_emulated" and latch "rd_sdram_addr[11]~17"
+    Warning (13310): Register "wr_sdram_addr[11]" is converted into an equivalent circuit using register "wr_sdram_addr[11]~_emulated" and latch "wr_sdram_addr[11]~17"
+    Warning (13310): Register "rd_sdram_addr[2]" is converted into an equivalent circuit using register "rd_sdram_addr[2]~_emulated" and latch "rd_sdram_addr[2]~21"
+    Warning (13310): Register "wr_sdram_addr[2]" is converted into an equivalent circuit using register "wr_sdram_addr[2]~_emulated" and latch "wr_sdram_addr[2]~21"
+    Warning (13310): Register "rd_sdram_addr[12]" is converted into an equivalent circuit using register "rd_sdram_addr[12]~_emulated" and latch "rd_sdram_addr[12]~25"
+    Warning (13310): Register "wr_sdram_addr[12]" is converted into an equivalent circuit using register "wr_sdram_addr[12]~_emulated" and latch "wr_sdram_addr[12]~25"
+    Warning (13310): Register "rd_sdram_addr[3]" is converted into an equivalent circuit using register "rd_sdram_addr[3]~_emulated" and latch "rd_sdram_addr[3]~29"
+    Warning (13310): Register "wr_sdram_addr[3]" is converted into an equivalent circuit using register "wr_sdram_addr[3]~_emulated" and latch "wr_sdram_addr[3]~29"
+    Warning (13310): Register "rd_sdram_addr[13]" is converted into an equivalent circuit using register "rd_sdram_addr[13]~_emulated" and latch "rd_sdram_addr[13]~33"
+    Warning (13310): Register "wr_sdram_addr[13]" is converted into an equivalent circuit using register "wr_sdram_addr[13]~_emulated" and latch "wr_sdram_addr[13]~33"
+    Warning (13310): Register "rd_sdram_addr[4]" is converted into an equivalent circuit using register "rd_sdram_addr[4]~_emulated" and latch "rd_sdram_addr[4]~37"
+    Warning (13310): Register "wr_sdram_addr[4]" is converted into an equivalent circuit using register "wr_sdram_addr[4]~_emulated" and latch "wr_sdram_addr[4]~37"
+    Warning (13310): Register "rd_sdram_addr[14]" is converted into an equivalent circuit using register "rd_sdram_addr[14]~_emulated" and latch "rd_sdram_addr[14]~41"
+    Warning (13310): Register "wr_sdram_addr[14]" is converted into an equivalent circuit using register "wr_sdram_addr[14]~_emulated" and latch "wr_sdram_addr[14]~41"
+    Warning (13310): Register "rd_sdram_addr[5]" is converted into an equivalent circuit using register "rd_sdram_addr[5]~_emulated" and latch "rd_sdram_addr[5]~45"
+    Warning (13310): Register "wr_sdram_addr[5]" is converted into an equivalent circuit using register "wr_sdram_addr[5]~_emulated" and latch "wr_sdram_addr[5]~45"
+    Warning (13310): Register "rd_sdram_addr[15]" is converted into an equivalent circuit using register "rd_sdram_addr[15]~_emulated" and latch "rd_sdram_addr[15]~49"
+    Warning (13310): Register "wr_sdram_addr[15]" is converted into an equivalent circuit using register "wr_sdram_addr[15]~_emulated" and latch "wr_sdram_addr[15]~49"
+    Warning (13310): Register "rd_sdram_addr[6]" is converted into an equivalent circuit using register "rd_sdram_addr[6]~_emulated" and latch "rd_sdram_addr[6]~53"
+    Warning (13310): Register "wr_sdram_addr[6]" is converted into an equivalent circuit using register "wr_sdram_addr[6]~_emulated" and latch "wr_sdram_addr[6]~53"
+    Warning (13310): Register "rd_sdram_addr[16]" is converted into an equivalent circuit using register "rd_sdram_addr[16]~_emulated" and latch "rd_sdram_addr[16]~57"
+    Warning (13310): Register "wr_sdram_addr[16]" is converted into an equivalent circuit using register "wr_sdram_addr[16]~_emulated" and latch "wr_sdram_addr[16]~57"
+    Warning (13310): Register "rd_sdram_addr[7]" is converted into an equivalent circuit using register "rd_sdram_addr[7]~_emulated" and latch "rd_sdram_addr[7]~61"
+    Warning (13310): Register "wr_sdram_addr[7]" is converted into an equivalent circuit using register "wr_sdram_addr[7]~_emulated" and latch "wr_sdram_addr[7]~61"
+    Warning (13310): Register "rd_sdram_addr[17]" is converted into an equivalent circuit using register "rd_sdram_addr[17]~_emulated" and latch "rd_sdram_addr[17]~65"
+    Warning (13310): Register "wr_sdram_addr[17]" is converted into an equivalent circuit using register "wr_sdram_addr[17]~_emulated" and latch "wr_sdram_addr[17]~65"
+    Warning (13310): Register "rd_sdram_addr[8]" is converted into an equivalent circuit using register "rd_sdram_addr[8]~_emulated" and latch "rd_sdram_addr[8]~69"
+    Warning (13310): Register "wr_sdram_addr[8]" is converted into an equivalent circuit using register "wr_sdram_addr[8]~_emulated" and latch "wr_sdram_addr[8]~69"
+    Warning (13310): Register "rd_sdram_addr[18]" is converted into an equivalent circuit using register "rd_sdram_addr[18]~_emulated" and latch "rd_sdram_addr[18]~73"
+    Warning (13310): Register "wr_sdram_addr[18]" is converted into an equivalent circuit using register "wr_sdram_addr[18]~_emulated" and latch "wr_sdram_addr[18]~73"
+    Warning (13310): Register "rd_sdram_addr[19]" is converted into an equivalent circuit using register "rd_sdram_addr[19]~_emulated" and latch "rd_sdram_addr[19]~77"
+    Warning (13310): Register "wr_sdram_addr[19]" is converted into an equivalent circuit using register "wr_sdram_addr[19]~_emulated" and latch "wr_sdram_addr[19]~77"
+    Warning (13310): Register "rd_sdram_addr[20]" is converted into an equivalent circuit using register "rd_sdram_addr[20]~_emulated" and latch "rd_sdram_addr[20]~81"
+    Warning (13310): Register "wr_sdram_addr[20]" is converted into an equivalent circuit using register "wr_sdram_addr[20]~_emulated" and latch "wr_sdram_addr[20]~81"
+    Warning (13310): Register "rd_sdram_addr[21]" is converted into an equivalent circuit using register "rd_sdram_addr[21]~_emulated" and latch "rd_sdram_addr[21]~85"
+    Warning (13310): Register "wr_sdram_addr[21]" is converted into an equivalent circuit using register "wr_sdram_addr[21]~_emulated" and latch "wr_sdram_addr[21]~85"
+    Warning (13310): Register "rd_sdram_addr[22]" is converted into an equivalent circuit using register "rd_sdram_addr[22]~_emulated" and latch "rd_sdram_addr[22]~89"
+    Warning (13310): Register "wr_sdram_addr[22]" is converted into an equivalent circuit using register "wr_sdram_addr[22]~_emulated" and latch "wr_sdram_addr[22]~89"
+    Warning (13310): Register "rd_sdram_addr[23]" is converted into an equivalent circuit using register "rd_sdram_addr[23]~_emulated" and latch "rd_sdram_addr[23]~93"
+    Warning (13310): Register "wr_sdram_addr[23]" is converted into an equivalent circuit using register "wr_sdram_addr[23]~_emulated" and latch "wr_sdram_addr[23]~93"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Cs_n" is stuck at GND
+    Warning (13410): Pin "Dqm[0]" is stuck at GND
+    Warning (13410): Pin "Dqm[1]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file E:/work_2/licheng/SDRAM/class32_Sdram_Control/dev/output_files/Sdram_Control.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1144 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 121 input pins
+    Info (21059): Implemented 56 output pins
+    Info (21060): Implemented 16 bidirectional pins
+    Info (21061): Implemented 919 logic cells
+    Info (21064): Implemented 32 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 106 warnings
+    Info: Peak virtual memory: 4672 megabytes
+    Info: Processing ended: Tue May 09 11:36:04 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in E:/work_2/licheng/SDRAM/class32_Sdram_Control/dev/output_files/Sdram_Control.map.smsg.
+
+

@@ -1,0 +1,20 @@
+Fitter Status : Successful - Thu May 11 22:27:40 2023
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : DE0_CV_SDRAM_RTL_Test
+Top-level Entity Name : DE0_CV_SDRAM_RTL_Test
+Family : Cyclone V
+Device : 5CEBA4F23C7
+Timing Models : Final
+Logic utilization (in ALMs) : 1,093 / 18,480 ( 6 % )
+Total registers : 2840
+Total pins : 206 / 224 ( 92 % )
+Total virtual pins : 0
+Total block memory bits : 2,220,032 / 3,153,920 ( 70 % )
+Total RAM Blocks : 271 / 308 ( 88 % )
+Total DSP Blocks : 0 / 66 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 2 / 4 ( 50 % )
+Total DLLs : 0 / 4 ( 0 % )

@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at seven_segment_LED.v(37): always construct contains both blocking and non-blocking assignments File: E:/work_2/module/DE0_CV_SDRAM_RTL_Test_1/v/seven_segment_LED.v Line: 37
